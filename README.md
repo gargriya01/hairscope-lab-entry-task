@@ -1,7 +1,7 @@
 # Lab Entry System
 
 **Author:** Riya Garg  
-**Email:** riya.garg@example.com
+**Email:** riyagarg10620@example.com
 
 ---
 
