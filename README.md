@@ -1,91 +1,93 @@
-Project Structure
-lab-entry/
-│
-├─ frontend/
-│   ├─ index.html        # Login page
-│   ├─ lab.html          # Lab page
-│   ├─ style.css         # Shared CSS for both pages
-│   └─ script.js         # JS logic
-│
-├─ assets/
-│   └─ placeholder images (optional course/lab images)
-│
-└─ README.md
-
-README.md
 # Lab Entry System
 
-This is a **password-protected lab entry system** with a countdown timer and animated login effects. It is a front-end only project (HTML, CSS, JS) that can be run in any modern web browser.
+**Author:** Riya Garg  
+**Email:** riya.garg@example.com
+
+---
+
+## Tech Stack Used
+
+- **Frontend:** HTML, CSS, Vanilla JavaScript  
+- **Animations:** CSS transitions & keyframes  
+- **Fonts:** Google Fonts (`Roboto`)  
+- **No backend** (front-end only; session state managed with `sessionStorage`)
 
 ---
 
 ## Features
 
-- Password-protected login (hardcoded password: `1234`)
-- Circle animation on correct login
-- Sliding door unlock effect (placeholder animation)
-- Countdown timer for allocated lab time (10 minutes)
-- Exit button preserves remaining time
-- Automatic logout on timeout
+- Password-protected login (hardcoded password: `1234`)  
+- Circle animation on correct login  
+- Sliding door unlock effect (placeholder)  
+- Countdown timer for allocated lab time (10 minutes)  
+- Exit button preserves remaining time  
+- Automatic logout on timeout  
 - Modern, colorful UI with placeholder course/lab images
 
 ---
 
 ## Folder Structure
 
-
-
 lab-entry/
 │
 ├─ frontend/
-│ ├─ index.html
-│ ├─ lab.html
-│ ├─ style.css
-│ └─ script.js
+│ ├─ index.html # Login page
+│ ├─ lab.html # Lab page
+│ ├─ style.css # Shared styles
+│ └─ script.js # JS logic
 │
 ├─ assets/
-│ └─ placeholder images
+│ └─ placeholder images (optional)
 │
 └─ README.md
 
+pgsql
+Copy
+Edit
 
 ---
 
-## Setup Instructions
+## Steps to Run the Project Locally
 
-1. **Clone or download** this repository.
-2. Navigate to the `frontend/` folder.
-3. Open `index.html` in your browser (double-click or use Live Server in VS Code).
-4. Enter the password `1234` to access the lab page.
-5. You can exit and re-enter—the remaining time will be preserved.
-6. When the timer reaches 0, the user is automatically logged out.
+1. Clone or download this repository.  
+2. Navigate to the `frontend/` folder.  
+3. Open `index.html` in any modern browser.  
+   - **Optional:** Use Live Server in VS Code for automatic reloads.  
+4. Enter the password **`1234`** to access the lab page.  
+5. Observe the circle animation → lab page with countdown timer.  
+6. Use the **Exit** button to return to the login screen; remaining time is preserved.  
+7. When the timer reaches 0, the user is automatically logged out and cannot log back in.
 
----
-
-## Dependencies
-
-- None. Pure front-end project.
-- Optional: [Google Fonts](https://fonts.google.com/) used in `index.html` for better typography (`Roboto`).
+> **Note:** Since this is a front-end only project, there is no `npm install` or backend server required.
 
 ---
 
-## Notes
+## Assumptions Made
 
-- Placeholder images are used for the course/lab visuals. You can replace them with your own images inside the `assets/` folder and update the `src` attributes in HTML.
-- To extend this project for multiple users or persistent login, a backend (Node.js/Express or similar) would be required.
+- Only **one user** is required (hardcoded password: `1234`).  
+- Countdown timer starts at **10 minutes** and is preserved on exit.  
+- Session management is done using `sessionStorage` (no database).  
+- Placeholder images are used for course/lab visuals. You can replace them in the `assets/` folder.  
+- No backend or persistent login implemented; refreshing the page does not reset session if within the countdown.
 
-How to Run Locally
+---
 
-Make sure you have the folder structure as above.
+## Screenshots / GIFs (Optional)
 
-Open the frontend/index.html file in a browser.
+- **Login Screen**  
+  ![Login Screen](assets/login-placeholder.png)  
 
-Enter password: 1234
+- **Lab Screen with Countdown Timer**  
+  ![Lab Screen](assets/lab-placeholder.png)  
 
-You’ll see the circle animation → navigate to lab page with countdown timer.
+- **Circle Animation on Correct Password**  
+  *(GIF can be added here if available)*
 
-Use Exit to go back while preserving remaining time.
+---
 
-Timer expiry logs the user out automatically.
+## Future Enhancements
 
-This setup is modular and ready for expansion, e.g., adding backend APIs, multiple users, or storing session info in a database.
+- Add **backend with Node.js/Express** for multiple users.  
+- Store user sessions in a database for persistent login.  
+- Replace placeholder images with real course/lab images.  
+- Improve animations with realistic sliding door effect.  
